@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Drink";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" class="active">
+        <div class="sidebar-header">
+            <h3>Aimjung Restaurant</h3>
+            <strong>AJ</strong>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="@Url.Action("Pork","Order")">
+                    @*<h3>Pork</h3>*@
+                    <img src="~/Content/images/sidebar/pig.png" style="height: 40px; width: 40px;" alt="..." />
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Beef","Order")">
+                    @*<h3>Beef</h3>*@
+                    <img src="~/Content/images/sidebar/cow.png" style="height: 40px; width: 40px;" alt="..." />
+                </a>
+                <a href="@Url.Action("Chicken","Order")">
+                    @*<h3>Chicken</h3>*@
+                    <img src="~/Content/images/sidebar/chicken.png" style="height: 40px; width: 40px;" alt="..." />
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Fish","Order")">
+                    @*<h3>Fish</h3>*@
+                    <img src="~/Content/images/sidebar/fish.png" style="height: 40px; width: 40px;" alt="..." />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    @*<h3>Drink</h3>*@
+                    <img src="~/Content/images/sidebar/plastic-bottle.png" style="height: 40px; width: 40px;" alt="..." />
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <div class="d-flex justify-content-center mt-4">
+            <img src="~/Content/images/sidebar/plastic-bottle.png" style="height: 100px; width: 100px;" alt="..." />
+        </div>
+        <div class="d-flex justify-content-around food-section py-3">
+            <div class="card p-2">
+                <img src="~/Content/images/drink/น้ำเปล่า60มล.jpg" class="card-img-top" style="height: 200px; width: 250px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">น้ำเปล่า60มล</h5>
+                </div>
+            </div>
+            <div class="card p-2">
+                <img src="~/Content/images/drink/โค้ก 1.5ลิตร.jpg" class="card-img-top" style="height: 200px; width: 250px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">โค้ก 1.5ลิตร</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#sidebar').on('mouseover', function () {
+                $(this).removeClass('active');
+            });
+
+            $('#sidebar').on('mouseleave', function () {
+                $(this).addClass('active');
+            });
+        });
+    </script>
+}
+

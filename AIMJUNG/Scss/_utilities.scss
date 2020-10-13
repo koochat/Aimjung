@@ -1,0 +1,36 @@
+﻿.bg-header {
+    background-image: url(../Content/images/bg-header.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.bg-card-header {
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/20/13/30/kitchen-731351_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    background-position: center;
+}
+
+.guide-section {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.food-section {
+    /*margin-left: 120px;
+    margin-right: 120px;*/
+}
+
+.arrow-section {
+    margin-top: 100px;
+}

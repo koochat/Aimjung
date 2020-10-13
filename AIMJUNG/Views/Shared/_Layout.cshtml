@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Scss/scss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="page-header">
+        <div class="bg-header d-flex justify-content-between p-1">
+            <div class="logo">
+                <img src="~/Content/images/bb4c5dcd-5740-4a3d-9dd7-281dcaf9f763_200x200.png" style="width: 200px; height: 200px;" alt="..." />
+            </div>
+            <div class="card-login mr-1 p-2 row align-items-center">
+                <div class="col-4">
+                    <img src="~/Content/images/bb4c5dcd-5740-4a3d-9dd7-281dcaf9f763_200x200.png" style="width: 100px; height: 100px;" alt="Alternate Text" />
+                </div>
+                <div class="col-8 mb-3">
+                    <a href="#" class="btn btn-light btn-login my-3">เข้าสู่ระบบ</a>
+                    <a href="#" class="btn btn-light btn-login">สมัครสมาชิก</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-header bg-card-header">
+        <div class="d-flex justify-content-around">
+            <a type="button" class="btn btn-nav" href="@Url.Action("Index","Home")">หน้าเเรก</a>
+            <a type="button" class="btn btn-nav" href="@Url.Action("Pork","Order")">รายการอาหาร</a>
+            <a type="button" class="btn btn-nav" href="#">โปรโมชั่น</a>
+            <a type="button" class="btn btn-nav" href="#">รีวิวร้านอาหาร</a>
+        </div>
+    </div>
+    <div class="container-fluid p-0 mb-4">
+        @RenderBody()
+    </div>
+
+    <footer class="bg-dark">
+        <div class="row body-content ml-5">
+            <div class="col-8 mt-3">
+                <p class="text-white">Contact Us</p>
+                <p class="text-white">Aim Jung Restaurant Co.,LTD.</p>
+                <p class="text-white">1521/4 Sukhumvit Khwang Phra Knanong Nuea Khet Watthana Province Bangkok 10110.</p>
+                <p class="text-white">(02)802-2224-3</p>
+                <p class="text-white">info@Aim_Jung.com</p>
+            </div>
+            <div class="col-4 mt-3">
+                <p class="text-white ml-5">Opening Hours</p>
+                <p class="text-white">Every Day 09.00 AM - 21.00 PM</p>
+                <br />
+                <br />
+                <br />
+                <p class="text-white">Thank you for using the service</p>
+            </div>
+        </div>
+        <hr />
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
